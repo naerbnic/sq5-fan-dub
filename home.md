@@ -1,9 +1,10 @@
 ---
-title: "Space Quest 5: The Fan Dub"
+title: Home
 
 layout: home
 id: home
 permalink: /
+nav_order: 0
 ---
 
 Welcome to the Space Quest V: The Fan Dub project!

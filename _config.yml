@@ -28,7 +28,7 @@ url: "https://naerbnic.github.io" # the base hostname & protocol for your site, 
 github_username:  naerbnic
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+remote_theme: "just-the-docs/just-the-docs"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
@@ -38,7 +38,7 @@ defaults:
       path: "project"
       type: "pages"
     values:
-      layout: "single"
+      layout: "page"
       sidebar:
         nav: "project"
 

@@ -1,6 +1,7 @@
 ---
 title: Project Overview
 permalink: /project/
+nav_order: 1
 ---
 
 This part of the site documents the goals, organization, and methods of the SQ5 Fan Dub project.
