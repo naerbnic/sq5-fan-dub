@@ -33,6 +33,16 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+defaults:
+  - scope:
+      path: "project"
+      type: "pages"
+    values:
+      layout: "single"
+      sidebar:
+        nav: "project"
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
