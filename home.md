@@ -1,11 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 title: "Space Quest 5: The Fan Dub"
 
 layout: home
 id: home
+permalink: /
 ---
 
 Welcome to the Space Quest V: The Fan Dub project!
