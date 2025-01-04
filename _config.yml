@@ -23,14 +23,15 @@ email: ludofex@plotflag.com
 description: >- # this means to ignore newlines until "baseurl:"
   The fan dub of Space Quest 5: The Next Mutation, by the SQH Discord community.
 domain: "naerbnic.github.io"
-baseurl: "/sq5-fan-dub/" # the subpath of your site, e.g. /blog
+baseurl: "/sq5-fan-dub" # the subpath of your site, e.g. /blog
 url: "https://naerbnic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  naerbnic
 
 # Build settings
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
