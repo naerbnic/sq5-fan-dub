@@ -7,6 +7,4 @@ title: "Space Quest 5: The Fan Dub"
 layout: home
 ---
 
-# Space Quest 5: The Fan Dub
-
 The only thing here is the [current master script](script/).
