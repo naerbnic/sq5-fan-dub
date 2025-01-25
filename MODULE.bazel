@@ -2,17 +2,17 @@
 
 bazel_dep(name = "sci_compiler")
 
-# git_override(
-#     module_name = "sci_compiler",
-#     remote = "https://github.com/naerbnic/sci-compiler.git",
-#     commit = "d213fcb5827254ef365c4add08e1829e0f5740e4",
-# )
-
-# During local development, use the local version of the compiler repo.
-local_path_override(
+git_override(
     module_name = "sci_compiler",
-    path = "../da-sci-compiler-pub"
+    remote = "https://github.com/naerbnic/sci-compiler.git",
+    commit = "ff456b1a67e24f1b4430a7a510d5419a093aab26",
 )
+
+# # During local development, use the local version of the compiler repo.
+# local_path_override(
+#     module_name = "sci_compiler",
+#     path = "../da-sci-compiler-pub"
+# )
 
 # LLVM is added to build the SCI compiler.
 #
