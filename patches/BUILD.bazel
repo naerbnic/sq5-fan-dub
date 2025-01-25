@@ -1,0 +1,17 @@
+load("@sci_compiler//rules:sc.bzl", "sci_build_env", "sci_binary")
+
+# The main game build environment, including the selectors and classdefs
+# from the original game.
+sci_build_env(
+    name = "sq5_main_env",
+    system = "@sci_compiler//:sci_system_1_1",
+    selector = "selector.sh",
+    classdef = "classdef.sh",
+    game_header = "game.sh",
+)
+
+sci_binary(
+    name = "patches",
+    srcs = ["//patches/src:messager"],
+    build_env = ":sq5_main_env",
+)
