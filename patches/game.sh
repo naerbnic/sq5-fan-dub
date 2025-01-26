@@ -6,6 +6,18 @@
     FindFormatLen 921 3
 )
 
+; System externs
+(extern
+	sign 999 0
+	umod 999 1
+	Min 999 2
+	Max 999 3
+	InRect 999 4
+	OneOf 999 5
+	WordAt 99 6
+	Eval 999 7
+)
+
 (globaldecl
     ; 0
     gEgo 0

@@ -9,3 +9,8 @@ sci_script(
     src = "Messager.sc",
     script_num = 924,
 )
+sci_script(
+    name = "talker",
+    src = "Talker.sc",
+    script_num = 928,
+)

@@ -13,6 +13,7 @@
 		curSequence 0
 		lastSequence 0
 	)
+	
 	(methods
 		sayFormat
 		findTalker
