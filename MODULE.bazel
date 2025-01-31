@@ -5,7 +5,7 @@ bazel_dep(name = "sci_compiler")
 git_override(
     module_name = "sci_compiler",
     remote = "https://github.com/naerbnic/sci-compiler.git",
-    commit = "711748165941c77342a99561861793bda12b4a9a",
+    commit = "053f82506fef7c2e4fdadd8ba153b7a078c3f7a8",
 )
 
 # # During local development, use the local version of the compiler repo.
