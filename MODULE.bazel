@@ -5,7 +5,7 @@ bazel_dep(name = "sci_compiler")
 git_override(
     module_name = "sci_compiler",
     remote = "https://github.com/naerbnic/sci-compiler.git",
-    commit = "08630b377b90fbf1a38569bf7cbb78a3a278e225",
+    commit = "dd7108d2823e83a8ffae1bf338e9593340f21d44",
 )
 
 # # During local development, use the local version of the compiler repo.
@@ -29,3 +29,4 @@ llvm.toolchain(
 use_repo(llvm, "llvm_toolchain")
 
 register_toolchains("@llvm_toolchain//:all")
+register_toolchains("@sci_compiler//toolchain:compiled_sci_compiler_toolchain")

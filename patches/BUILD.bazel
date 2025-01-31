@@ -7,7 +7,6 @@ sci_build_env(
     classdef = "classdef.sh",
     game_header = "game.sh",
     selector = "selector.sh",
-    system = "@sci_compiler//:sci_system_1_1",
 )
 
 sci_binary(
