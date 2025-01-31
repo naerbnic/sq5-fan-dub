@@ -1,1 +1,4 @@
 /bazel-*
+
+# Remove lock file, as it changes between machines.
+/MODULE.bazel.lock
