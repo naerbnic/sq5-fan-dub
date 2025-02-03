@@ -17,16 +17,16 @@
 	)
 
 	(methods
-		isKindOf
-		isMemberOf
-		showSelf
-		init
-		perform
 		new
-		respondsTo
+		init
+		doit
 		dispose
 		showStr
-		doit
+		showSelf
+		perform
+		isKindOf
+		isMemberOf
+		respondsTo
 		yourself
 	)
 )
@@ -77,21 +77,21 @@
 	)
 
 	(methods
+		doit
+		dispose
+		showStr
+		showSelf
+		add
 		delete
+		eachElementDo
+		firstTrue
+		allTrue
 		contains
 		isEmpty
-		add
-		doit
-		release
-		eachElementDo
-		dispose
-		showSelf
-		isDuplicate
-		next
-		firstTrue
 		first
-		showStr
-		allTrue
+		next
+		release
+		isDuplicate
 	)
 )
 
@@ -117,14 +117,14 @@
 	)
 
 	(methods
-		last
-		at
-		prev
 		showStr
+		at
+		last
+		prev
 		addToFront
+		addToEnd
 		addAfter
 		indexOf
-		addToEnd
 	)
 )
 
@@ -214,11 +214,11 @@
 	)
 
 	(methods
+		init
+		doit
 		dispose
 		changeState
-		init
 		cue
-		doit
 		handleEvent
 		setScript
 	)
@@ -251,9 +251,9 @@
 	)
 
 	(methods
-		globalize
 		new
 		localize
+		globalize
 	)
 )
 
@@ -285,12 +285,12 @@
 	)
 
 	(methods
+		init
 		posn
+		posnHotSpot
 		setLoop
 		setCel
 		showCursor
-		init
-		posnHotSpot
 	)
 )
 
@@ -319,15 +319,15 @@
 	)
 
 	(methods
+		new
+		init
+		doit
+		dispose
+		set
+		setCycle
+		setReal
 		delete
 		setTicks
-		set
-		init
-		dispose
-		doit
-		setReal
-		new
-		setCycle
 	)
 )
 
@@ -352,8 +352,8 @@
 	)
 
 	(methods
-		set
 		doit
+		set
 	)
 )
 
@@ -434,24 +434,24 @@
 	)
 
 	(methods
-		pause
-		check
+		new
 		init
-		clean
-		playBed
+		dispose
+		play
 		stop
+		pause
 		hold
 		release
-		mute
-		play
 		fade
-		setPri
-		new
-		setLoop
-		changeState
+		mute
 		setVol
-		dispose
+		setPri
+		setLoop
 		send
+		check
+		clean
+		playBed
+		changeState
 	)
 )
 
@@ -484,19 +484,19 @@
 	)
 
 	(methods
+		doit
+		enable
+		select
+		handleEvent
+		check
+		track
+		setSize
 		move
 		moveTo
 		draw
+		isType
 		checkState
 		cycle
-		select
-		isType
-		enable
-		check
-		doit
-		handleEvent
-		setSize
-		track
 	)
 )
 
@@ -578,17 +578,17 @@
 
 	(methods
 		doit
-		retreat
+		dispose
 		open
-		center
 		draw
 		advance
+		retreat
+		move
+		moveTo
+		center
 		setSize
 		handleEvent
 		check
-		dispose
-		moveTo
-		move
 	)
 )
 
@@ -697,8 +697,8 @@
 	)
 
 	(methods
-		setSize
 		track
+		setSize
 	)
 )
 
@@ -738,11 +738,11 @@
 	)
 
 	(methods
-		advance
-		indexOf
-		setSize
-		at
 		handleEvent
+		setSize
+		indexOf
+		at
+		advance
 		retreat
 	)
 )
@@ -808,20 +808,20 @@
 	)
 
 	(methods
-		cue
-		addText
-		addTextF
+		init
+		doit
+		dispose
 		showSelf
+		addButton
 		addColorButton
 		addEdit
 		addIcon
-		doit
-		init
-		dispose
-		addButton
+		addText
+		addTextF
 		addTitle
 		posn
 		handleEvent
+		cue
 	)
 )
 
@@ -866,11 +866,11 @@
 	)
 
 	(methods
-		select
-		onMe
-		highlight
-		mask
 		show
+		select
+		highlight
+		onMe
+		mask
 	)
 )
 
@@ -912,21 +912,21 @@
 	)
 
 	(methods
-		dispatchEvent
+		doit
+		handleEvent
 		show
-		findIcon
-		disable
-		noClickHelp
-		advance
-		select
 		hide
+		advance
+		retreat
+		select
 		highlight
 		swapCurIcon
-		retreat
 		advanceCurIcon
-		handleEvent
+		dispatchEvent
+		disable
 		enable
-		doit
+		noClickHelp
+		findIcon
 	)
 )
 
@@ -955,10 +955,10 @@
 	)
 
 	(methods
+		init
 		nextCel
 		cycleDone
 		motionCue
-		init
 	)
 )
 
@@ -1047,9 +1047,9 @@
 	)
 
 	(methods
-		cycleDone
 		init
 		doit
+		cycleDone
 	)
 )
 
@@ -1140,8 +1140,8 @@
 	)
 
 	(methods
-		nextCel
 		doit
+		nextCel
 	)
 )
 
@@ -1180,12 +1180,12 @@
 	)
 
 	(methods
-		doit
-		motionCue
-		moveDone
 		init
+		doit
+		moveDone
 		setTarget
 		onTarget
+		motionCue
 	)
 )
 
@@ -1253,8 +1253,8 @@
 	)
 
 	(methods
-		cycleDone
 		doit
+		cycleDone
 	)
 )
 
@@ -1296,9 +1296,9 @@
 
 	(methods
 		init
-		onTarget
-		setTarget
 		doit
+		setTarget
+		onTarget
 	)
 )
 
@@ -1339,10 +1339,10 @@
 	)
 
 	(methods
-		setTarget
-		doit
 		init
+		doit
 		moveDone
+		setTarget
 		onTarget
 	)
 )
@@ -1383,11 +1383,11 @@
 	)
 
 	(methods
-		onTarget
-		doit
 		init
+		doit
 		moveDone
 		setTarget
+		onTarget
 	)
 )
 
@@ -1492,8 +1492,8 @@
 
 	(methods
 		syncStart
-		syncStop
 		syncCheck
+		syncStop
 	)
 )
 
@@ -1520,8 +1520,8 @@
 
 	(methods
 		init
-		cue
 		doit
+		cue
 	)
 )
 
@@ -1550,10 +1550,10 @@
 	)
 
 	(methods
-		doit
 		init
-		cue
+		doit
 		dispose
+		cue
 	)
 )
 
@@ -1600,11 +1600,11 @@
 	)
 
 	(methods
-		setTest
+		init
 		doit
 		moveDone
 		motionCue
-		init
+		setTest
 	)
 )
 
@@ -1651,8 +1651,8 @@
 	)
 
 	(methods
-		moveDone
 		init
+		moveDone
 	)
 )
 
@@ -1732,17 +1732,17 @@
 	)
 
 	(methods
+		init
+		dispose
+		initialize
 		handleEvent
+		doVerb
+		notFacing
+		facingMe
 		isNotHidden
 		onMe
 		approachVerbs
 		setName
-		init
-		initialize
-		notFacing
-		doVerb
-		dispose
-		facingMe
 		setOnMeCheck
 	)
 )
@@ -1828,27 +1828,27 @@
 	)
 
 	(methods
-		setPri
-		setCel
-		posn
-		isNotHidden
-		ignoreActors
-		forceUpd
-		hide
 		init
-		checkDetail
-		show
-		setScale
-		addToPic
-		motionCue
-		delete
-		stopUpd
 		dispose
-		setLoop
 		showSelf
-		lastCel
-		startUpd
+		isNotHidden
 		onMe
+		posn
+		stopUpd
+		forceUpd
+		startUpd
+		setPri
+		setLoop
+		setCel
+		ignoreActors
+		hide
+		show
+		delete
+		addToPic
+		lastCel
+		motionCue
+		checkDetail
+		setScale
 	)
 )
 
@@ -1917,13 +1917,13 @@
 	(methods
 		doit
 		handleEvent
+		delete
 		motionCue
 		checkDetail
 		setScale
+		setCycle
 		setScript
 		cue
-		setCycle
-		delete
 	)
 )
 
@@ -2003,30 +2003,30 @@
 	)
 
 	(methods
-		setDirection
-		ignoreControl
-		motionCue
-		setMotion
-		onControl
+		init
+		doit
 		posn
+		setLoop
+		delete
+		motionCue
+		checkDetail
+		setMotion
+		setAvoider
+		ignoreHorizon
+		observeControl
+		ignoreControl
+		observeBlocks
+		ignoreBlocks
+		isStopped
+		isBlocked
+		inRect
+		onControl
 		distanceTo
+		cantBeHere
+		setStep
+		setDirection
 		setHeading
 		setSpeed
-		init
-		observeControl
-		setStep
-		inRect
-		isStopped
-		checkDetail
-		observeBlocks
-		setAvoider
-		doit
-		ignoreHorizon
-		isBlocked
-		cantBeHere
-		setLoop
-		ignoreBlocks
-		delete
 	)
 )
 
@@ -2058,11 +2058,11 @@
 	)
 
 	(methods
+		init
 		doit
+		canControl
 		handleEvent
 		canInput
-		init
-		canControl
 	)
 )
 
@@ -2088,8 +2088,8 @@
 	)
 
 	(methods
-		doit
 		init
+		doit
 	)
 )
 
@@ -2170,13 +2170,13 @@
 	)
 
 	(methods
-		put
-		doit
-		has
 		init
+		doit
 		handleEvent
-		get
 		facingMe
+		get
+		put
+		has
 	)
 )
 
@@ -2257,16 +2257,16 @@
 	)
 
 	(methods
-		write
-		showStr
-		writeString
-		read
-		delete
 		dispose
+		showStr
 		open
 		readString
+		writeString
+		write
+		read
 		seek
 		close
+		delete
 	)
 )
 
@@ -2309,9 +2309,9 @@
 	)
 
 	(methods
-		readFiles
 		dispose
 		setSize
+		readFiles
 	)
 )
 
@@ -2399,19 +2399,19 @@
 	)
 
 	(methods
-		save
-		center
-		setMapSet
-		erase
 		doit
-		draw
-		handleEvent
-		restore
 		dispose
-		inset
-		moveTo
-		show
+		handleEvent
+		setMapSet
 		move
+		moveTo
+		draw
+		save
+		restore
+		inset
+		show
+		erase
+		center
 	)
 )
 
@@ -2693,12 +2693,12 @@
 	)
 
 	(methods
-		doVerb
 		show
-		onMe
-		moveTo
-		ownedBy
 		highlight
+		onMe
+		ownedBy
+		moveTo
+		doVerb
 	)
 )
 
@@ -2746,15 +2746,15 @@
 	)
 
 	(methods
+		init
+		doit
+		showSelf
+		show
+		hide
 		advance
 		retreat
-		doit
-		hide
 		ownedBy
-		init
 		drawInvWindow
-		show
-		showSelf
 	)
 )
 
@@ -2838,28 +2838,28 @@
 	)
 
 	(methods
-		newRoom
+		init
+		doit
 		play
+		replay
+		newRoom
+		startRoom
+		restart
+		restore
+		save
+		changeScore
+		handleEvent
+		showMem
+		setCursor
+		notify
+		setScript
+		cue
+		quitGame
+		masterVolume
+		detailLevel
+		pragmaFail
 		handsOff
 		handsOn
-		init
-		detailLevel
-		replay
-		masterVolume
-		showMem
-		changeScore
-		cue
-		restart
-		startRoom
-		restore
-		handleEvent
-		doit
-		setCursor
-		setScript
-		notify
-		quitGame
-		pragmaFail
-		save
 	)
 )
 
@@ -2890,14 +2890,14 @@
 	)
 
 	(methods
-		dispose
-		doit
-		handleEvent
 		init
+		doit
+		dispose
+		handleEvent
+		doVerb
 		setScript
 		cue
 		newRoom
-		doVerb
 		notify
 	)
 )
@@ -2943,18 +2943,18 @@
 	)
 
 	(methods
-		setRegions
+		init
 		doit
+		dispose
+		handleEvent
+		newRoom
+		setRegions
 		drawPic
 		overlay
 		addObstacle
+		reflectPosn
 		edgeToRoom
 		roomToEdge
-		dispose
-		reflectPosn
-		init
-		newRoom
-		handleEvent
 		setInset
 	)
 )
@@ -3015,11 +3015,11 @@
 
 	(methods
 		dispose
-		findTalker
 		cue
-		sayNext
-		sayFormat
 		say
+		sayFormat
+		sayNext
+		findTalker
 	)
 )
 
@@ -3065,9 +3065,9 @@
 	)
 
 	(methods
-		handleEvent
 		init
 		doit
+		handleEvent
 		update
 	)
 )
@@ -3156,11 +3156,11 @@
 	)
 
 	(methods
-		atEnd
+		init
 		moveDone
 		at
-		init
 		next
+		atEnd
 	)
 )
 
@@ -3232,9 +3232,9 @@
 	)
 
 	(methods
-		dispose
 		init
 		doit
+		dispose
 	)
 )
 
@@ -3262,8 +3262,8 @@
 	)
 
 	(methods
-		dispose
 		doit
+		dispose
 		cue
 	)
 )
@@ -3295,11 +3295,11 @@
 	)
 
 	(methods
-		nextCel
 		init
+		doit
+		nextCel
 		cycleDone
 		loopIsCorrect
-		doit
 	)
 )
 
@@ -3333,9 +3333,9 @@
 	)
 
 	(methods
-		cue
 		doit
 		dispose
+		cue
 	)
 )
 
@@ -3426,12 +3426,12 @@
 	)
 
 	(methods
-		findPosn
-		posn
 		doit
-		canBeHere
-		track
 		handleEvent
+		posn
+		canBeHere
+		findPosn
+		track
 	)
 )
 
@@ -3472,8 +3472,8 @@
 	(methods
 		init
 		dispose
-		lastCel
 		cycle
+		lastCel
 	)
 )
 
@@ -3515,9 +3515,9 @@
 
 	(methods
 		init
-		setTarget
 		dispose
 		moveDone
+		setTarget
 	)
 )
 
@@ -3606,17 +3606,17 @@
 	)
 
 	(methods
-		at
-		atEnd
 		init
-		curRoomCheck
+		dispose
 		moveDone
 		next
-		dispose
-		findPathend
+		atEnd
 		nextRoom
+		at
 		nextValue
+		findPathend
 		findPrevroom
+		curRoomCheck
 	)
 )
 
@@ -3646,8 +3646,8 @@
 	)
 
 	(methods
-		cycleDone
 		init
+		cycleDone
 	)
 )
 
@@ -3732,9 +3732,9 @@
 	)
 
 	(methods
+		init
 		doit
 		setTarget
-		init
 		onTarget
 	)
 )
@@ -3811,10 +3811,10 @@
 	)
 
 	(methods
-		cycleDone
-		doit
 		init
+		doit
 		nextCel
+		cycleDone
 	)
 )
 
@@ -3845,10 +3845,10 @@
 	)
 
 	(methods
-		cycleDone
+		init
 		doit
 		nextCel
-		init
+		cycleDone
 	)
 )
 
@@ -3908,8 +3908,8 @@
 	)
 
 	(methods
-		doit
 		init
+		doit
 		cycleDone
 	)
 )
@@ -3942,9 +3942,9 @@
 	)
 
 	(methods
+		init
 		doit
 		cycleDone
-		init
 	)
 )
 
@@ -3998,12 +3998,12 @@
 	)
 
 	(methods
+		new
+		yourself
 		dispose
 		draw
-		new
-		restore
 		save
-		yourself
+		restore
 	)
 )
 
@@ -4039,30 +4039,30 @@
 	)
 
 	(methods
-		getDistToPt
-		getDistToLine
-		writeFile
-		undo
-		deletePt
-		prev
-		save
-		saveForUndo
-		next
-		advance
-		setCurClosest
-		movePt
-		startRedraw
-		draw
-		writeObstacle
 		add
-		getAccessType
-		insertPt
+		next
+		prev
+		draw
+		advance
 		retreat
-		check
+		setCur
+		setCurClosest
+		insertPt
+		deletePt
+		movePt
+		undo
+		saveForUndo
+		getDistToLine
+		getDistToPt
+		startRedraw
 		endRedraw
 		restore
+		save
 		eachLineDo
-		setCur
+		writeObstacle
+		writeFile
+		getAccessType
+		check
 	)
 )
 
@@ -4100,28 +4100,28 @@
 	)
 
 	(methods
-		handleEvent
-		undo
-		insertPt
-		finishAdding
-		delete
 		init
+		doit
 		dispose
 		add
+		delete
+		handleEvent
 		changeState
+		draw
+		select
+		selectPt
+		addPt
+		finishAdding
+		movePt
+		insertPt
+		deletePt
+		undo
+		saveForUndo
 		advanceRetreat
 		readObstacles
-		addPt
-		showMap
-		draw
-		selectPt
-		exit
-		select
-		movePt
-		deletePt
 		writeObstacles
-		doit
-		saveForUndo
+		showMap
+		exit
 	)
 )
 
@@ -4167,8 +4167,8 @@
 	)
 
 	(methods
-		writeList
 		doit
+		writeList
 	)
 )
 
@@ -4216,12 +4216,12 @@
 	)
 
 	(methods
-		create
 		dispose
+		open
+		create
 		moveTo
 		editMsg
 		editPosn
-		open
 		editTitle
 	)
 )
@@ -4256,13 +4256,13 @@
 	)
 
 	(methods
+		dispose
 		select
+		handleEvent
 		track
 		draw
-		editPosn
 		hide
-		handleEvent
-		dispose
+		editPosn
 	)
 )
 
@@ -4305,13 +4305,13 @@
 	)
 
 	(methods
-		editWidth
-		editMsg
 		setSize
-		editJust
-		editText
 		showHelp
 		editFont
+		editJust
+		editMsg
+		editText
+		editWidth
 	)
 )
 
@@ -4348,11 +4348,11 @@
 	)
 
 	(methods
-		editLoop
 		setSize
-		editCel
 		showHelp
 		editView
+		editLoop
+		editCel
 	)
 )
 
@@ -4394,9 +4394,9 @@
 
 	(methods
 		setSize
-		editMsg
-		editFont
 		showHelp
+		editFont
+		editMsg
 		editText
 		editValue
 	)
@@ -4436,11 +4436,11 @@
 	)
 
 	(methods
-		showHelp
-		editText
-		editLength
-		editFont
 		setSize
+		showHelp
+		editFont
+		editLength
+		editText
 	)
 )
 
@@ -4478,8 +4478,8 @@
 
 	(methods
 		setSize
-		editLength
 		showHelp
+		editLength
 		editWidth
 	)
 )
@@ -4509,14 +4509,14 @@
 	)
 
 	(methods
+		init
+		doit
+		dispose
+		handleEvent
 		delItem
-		changeState
 		exit
 		writeFile
-		dispose
-		doit
-		init
-		handleEvent
+		changeState
 	)
 )
 
@@ -4576,14 +4576,14 @@
 
 	(methods
 		doit
-		move
-		posnToValue
+		show
+		select
 		highlight
 		advance
-		select
 		retreat
-		show
+		move
 		valueToPosn
+		posnToValue
 	)
 )
 
@@ -4626,12 +4626,12 @@
 	)
 
 	(methods
+		show
+		hide
+		select
 		swapCurIcon
 		advanceCurIcon
-		hide
-		show
 		dispatchEvent
-		select
 	)
 )
 
@@ -4707,10 +4707,10 @@
 	)
 
 	(methods
-		stop
 		doit
 		handleEvent
 		start
+		stop
 	)
 )
 
@@ -4758,9 +4758,9 @@
 	)
 
 	(methods
-		moveDone
 		init
 		doit
+		moveDone
 	)
 )
 
@@ -4809,8 +4809,8 @@
 
 	(methods
 		init
-		moveDone
 		doit
+		moveDone
 	)
 )
 
@@ -4839,9 +4839,9 @@
 	)
 
 	(methods
+		init
 		doit
 		dispose
-		init
 	)
 )
 
@@ -4874,9 +4874,9 @@
 	)
 
 	(methods
+		init
 		doit
 		cycleDone
-		init
 	)
 )
 
@@ -4957,14 +4957,14 @@
 	)
 
 	(methods
-		doit
 		init
-		display
-		startAudio
+		doit
 		dispose
 		handleEvent
 		say
 		startText
+		display
+		startAudio
 	)
 )
 
@@ -5053,17 +5053,17 @@
 	)
 
 	(methods
-		setSize
-		display
-		cycle
-		say
-		startAudio
-		dispose
 		init
+		doit
+		dispose
 		hide
 		show
+		say
 		startText
-		doit
+		display
+		startAudio
+		cycle
+		setSize
 	)
 )
 
@@ -5127,13 +5127,13 @@
 	)
 
 	(methods
+		init
+		doit
 		dispose
 		add
-		doit
-		setScript
 		cue
+		setScript
 		load
-		init
 	)
 )
 
@@ -5185,18 +5185,18 @@
 	)
 
 	(methods
-		doVerb
-		handleEvent
-		drawInset
 		init
-		refresh
-		onMe
 		doit
 		dispose
-		setInset
-		hideCast
-		restore
 		setScript
+		handleEvent
+		doVerb
+		hideCast
+		drawInset
+		restore
+		refresh
+		setInset
+		onMe
 	)
 )
 
@@ -5228,8 +5228,8 @@
 	)
 
 	(methods
-		doit
 		init
+		doit
 	)
 )
 
@@ -5267,9 +5267,9 @@
 	)
 
 	(methods
-		dispose
-		doit
 		init
+		doit
+		dispose
 	)
 )
 
@@ -5356,13 +5356,13 @@
 
 	(methods
 		init
-		cue
 		dispose
+		doVerb
+		cue
+		open
+		close
 		listen
 		createPoly
-		close
-		doVerb
-		open
 	)
 )
 
@@ -5388,12 +5388,12 @@
 	)
 
 	(methods
-		setSize
-		test
-		clear
-		set
 		init
 		dispose
+		setSize
+		set
+		clear
+		test
 	)
 )
 
@@ -5435,9 +5435,9 @@
 	)
 
 	(methods
-		draw
-		setSize
 		track
+		setSize
+		draw
 	)
 )
 
@@ -5476,9 +5476,9 @@
 	)
 
 	(methods
-		dispose
 		init
 		doit
+		dispose
 	)
 )
 
@@ -5560,8 +5560,8 @@
 
 	(methods
 		handleEvent
-		setSpeed
 		doVerb
+		setSpeed
 	)
 )
 
@@ -5726,12 +5726,12 @@
 	)
 
 	(methods
-		drawInvWindow
-		scroll
-		retreat
 		dispose
 		hide
 		advance
+		retreat
+		drawInvWindow
+		scroll
 	)
 )
 
@@ -5835,8 +5835,8 @@
 	)
 
 	(methods
-		dispose
 		init
+		dispose
 		open
 		move
 		moveTo
@@ -5871,21 +5871,21 @@
 	)
 
 	(methods
-		handsOff
-		handsOn
-		save
-		showControls
-		restart
-		handleEvent
-		startRoom
-		pragmaFail
 		init
-		setCursor
-		quitGame
-		showAbout
-		restore
 		doit
 		play
+		startRoom
+		restart
+		restore
+		save
+		handleEvent
+		setCursor
+		quitGame
+		pragmaFail
+		handsOff
+		handsOn
+		showAbout
+		showControls
 	)
 )
 
@@ -5975,10 +5975,10 @@
 	)
 
 	(methods
-		cycle
-		hide
 		dispose
+		hide
 		show
+		cycle
 	)
 )
 
@@ -6066,9 +6066,9 @@
 	)
 
 	(methods
+		init
 		doit
 		dispose
-		init
 		newRoom
 	)
 )
@@ -6133,10 +6133,10 @@
 	)
 
 	(methods
-		doVerb
 		init
-		newRoom
 		dispose
+		doVerb
+		newRoom
 	)
 )
 
@@ -6168,9 +6168,9 @@
 	)
 
 	(methods
+		init
 		doit
 		newRoom
-		init
 	)
 )
 
@@ -6200,8 +6200,8 @@
 	)
 
 	(methods
-		nextCel
 		doit
+		nextCel
 	)
 )
 
@@ -6244,8 +6244,8 @@
 
 	(methods
 		init
-		setTarget
 		doit
+		setTarget
 		onTarget
 	)
 )
@@ -6273,9 +6273,9 @@
 	)
 
 	(methods
-		dispose
-		doit
 		init
+		doit
+		dispose
 	)
 )
 
@@ -6306,9 +6306,9 @@
 	)
 
 	(methods
-		cycleDone
 		doit
 		nextCel
+		cycleDone
 	)
 )
 
@@ -6356,10 +6356,10 @@
 	)
 
 	(methods
-		moveDone
-		motionCue
-		onTarget
 		init
+		moveDone
+		onTarget
+		motionCue
 		readjustWell
 	)
 )
@@ -6582,11 +6582,11 @@
 	)
 
 	(methods
+		show
 		say
+		startText
 		display
 		cycle
-		show
-		startText
 	)
 )
 
@@ -6870,9 +6870,9 @@
 	)
 
 	(methods
+		init
 		handleEvent
 		doVerb
-		init
 	)
 )
 
@@ -6939,9 +6939,9 @@
 	)
 
 	(methods
+		init
 		doVerb
 		cue
-		init
 	)
 )
 
@@ -7025,12 +7025,12 @@
 	)
 
 	(methods
-		doit
-		pickUp
 		init
-		drop
-		cue
+		doit
 		doVerb
+		cue
+		drop
+		pickUp
 	)
 )
 
@@ -7118,11 +7118,11 @@
 
 	(methods
 		init
-		doVerb
-		pickup
 		doit
-		drop
+		doVerb
 		cue
+		drop
+		pickup
 	)
 )
 
@@ -7234,8 +7234,8 @@
 	)
 
 	(methods
-		nextCel
 		checkDetail
+		nextCel
 	)
 )
 
@@ -7296,9 +7296,9 @@
 	)
 
 	(methods
-		handleEvent
 		init
 		doit
+		handleEvent
 		onMe
 	)
 )
@@ -7517,11 +7517,11 @@
 	)
 
 	(methods
-		cue
-		show
+		init
 		dispose
 		hide
-		init
+		show
+		cue
 	)
 )
 
@@ -7883,12 +7883,12 @@
 	)
 
 	(methods
-		doit
 		init
-		onMe
+		doit
 		doVerb
-		normalize
+		onMe
 		place
+		normalize
 	)
 )
 
@@ -7917,16 +7917,16 @@
 	)
 
 	(methods
-		select
-		hide
 		init
-		advance
-		show
-		handleEvent
-		dispose
 		doit
-		retreat
+		dispose
+		handleEvent
+		select
 		highLight
+		advance
+		retreat
+		hide
+		show
 	)
 )
 
@@ -7988,10 +7988,10 @@
 	)
 
 	(methods
-		highLight
-		handleEvent
 		init
 		doit
+		handleEvent
+		highLight
 	)
 )
 
@@ -8023,8 +8023,8 @@
 	)
 
 	(methods
-		doit
 		init
+		doit
 	)
 )
 
