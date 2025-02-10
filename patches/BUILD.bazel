@@ -12,6 +12,7 @@ sci_build_env(
 sci_binary(
     name = "patches",
     srcs = [
+        "//patches/src:main",
         "//patches/src:messager",
         "//patches/src:talker",
     ],

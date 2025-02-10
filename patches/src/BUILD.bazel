@@ -5,10 +5,17 @@ package(
 )
 
 sci_script(
+    name = "main",
+    src = "Main.sc",
+    script_num = 0,
+)
+
+sci_script(
     name = "messager",
     src = "Messager.sc",
     script_num = 924,
 )
+
 sci_script(
     name = "talker",
     src = "Talker.sc",

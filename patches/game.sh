@@ -2,6 +2,13 @@
 ; from game resources.
 ;
 ; These are derived from the sluicebox decompiled scripts.
+
+; From: n012.sc
+(extern
+    proc12_0 12 0
+)
+
+; From: Print.sc
 (extern
     FindFormatLen 921 3
 )
