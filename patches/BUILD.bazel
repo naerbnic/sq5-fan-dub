@@ -1,4 +1,4 @@
-load("@sci_compiler//rules:sci.bzl", "sci_binary", "sci_build_env")
+load("@rules_sci//sci:sci.bzl", "sci_binary", "sci_build_env")
 
 # The main game build environment, including the selectors and classdefs
 # from the original game.

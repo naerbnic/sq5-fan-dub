@@ -1,11 +1,12 @@
 """Top-level Bazel module file for the SQ5 Fan Dub project repo."""
 
 bazel_dep(name = "sci_compiler")
+bazel_dep(name = "rules_sci", version = "0.0.1")
 
 git_override(
     module_name = "sci_compiler",
     remote = "https://github.com/naerbnic/sci-compiler.git",
-    commit = "62a57ce4a1acfca9c29b4916465d800302f4809a",
+    commit = "ebf7707ce94eb9b2394c45762650b162b5691a0f",
 )
 
 # # During local development, use the local version of the compiler repo.
@@ -14,4 +15,5 @@ git_override(
 #     path = "../da-sci-compiler-pub"
 # )
 
-register_toolchains("@sci_compiler//toolchain:compiled_sci_compiler_toolchain")
+# register_toolchains("@sci_compiler//toolchain:compiled_sci_compiler_toolchain")
+register_toolchains("@sci_compiler//toolchain:updated_sci_compiler_toolchain")

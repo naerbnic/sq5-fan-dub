@@ -1,4 +1,4 @@
-load("@sci_compiler//rules:sci.bzl", "sci_script")
+load("@rules_sci//sci:sci.bzl", "sci_script")
 
 package(
     default_visibility = ["//patches:__subpackages__"],
