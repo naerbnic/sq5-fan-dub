@@ -13,6 +13,11 @@
     FindFormatLen 921 3
 )
 
+; From: debugHandler.sc
+(extern
+    debugHandler 10 0
+)
+
 ; System externs
 (extern
 	sign 999 0
