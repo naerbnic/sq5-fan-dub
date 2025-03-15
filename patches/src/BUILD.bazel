@@ -27,3 +27,9 @@ sci_script(
     src = "Talker.sc",
     script_num = 928,
 )
+
+sci_script(
+    name = "debug_enable",
+    src = "DebugEnable.sc",
+    script_num = 880,
+)

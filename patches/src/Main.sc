@@ -891,6 +891,12 @@
 							init:
 						)
 					)
+					(KEY_ALT_d
+						((ScriptID 10) init:)
+						(Print
+							addText: {Debugger Enabled}
+							init:)
+					)
 					(else
 						(event claimed: 0)
 					)

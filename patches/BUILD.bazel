@@ -16,6 +16,7 @@ sci_binary(
         "//patches/src:main",
         "//patches/src:messager",
         "//patches/src:talker",
+        "//patches/src:debug_enable",
     ],
     build_env = ":sq5_main_env",
 )
