@@ -11,6 +11,12 @@ sci_script(
 )
 
 sci_script(
+    name = "anim_dialog",
+    src = "AnimDialog.sc",
+    script_num = 30,
+)
+
+sci_script(
     name = "messager",
     src = "Messager.sc",
     script_num = 924,
