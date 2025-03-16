@@ -14,3 +14,22 @@ use_repo(scinc_release, "scinc_release")
 register_toolchains(
   "@scinc_release//:scinc_toolchain",
 )
+
+# For local development, you can uncomment the following lines to use a local
+# version of the rules_sci and sci_compiler repositories.
+#
+# local_path_override(
+#   module_name = "rules_sci",
+#   path = "../rules_sci",
+# )
+
+# bazel_dep(name = "sci_compiler")
+
+# local_path_override(
+#   module_name = "sci_compiler",
+#   path = "../da-sci-compiler-pub",
+# )
+
+# register_toolchains(
+#   "@sci_compiler//toolchain:updated_sci_compiler_toolchain",
+# )
