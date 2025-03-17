@@ -26,7 +26,7 @@
 	Max 999 3
 	InRect 999 4
 	OneOf 999 5
-	WordAt 99 6
+	WordAt 999 6
 	Eval 999 7
 )
 
