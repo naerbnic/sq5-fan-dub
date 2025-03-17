@@ -1,7 +1,7 @@
 """Top-level Bazel module file for the SQ5 Fan Dub project repo."""
 
 bazel_dep(name = "rules_sci", version = "0.0.1")
-bazel_dep(name = "toolchains_scinc", version = "0.0.1")
+bazel_dep(name = "toolchains_scinc", version = "0.0.2")
 
 scinc_release = use_extension(
   "@toolchains_scinc//toolchain/extensions:release.bzl",
