@@ -88,11 +88,15 @@
 	)
 
 	(method (init)
-		(if global83
+		(if (& gMsgType $0002)
 			(self curVolume: (gGame masterVolume:))
 			(if (>= (gGame masterVolume:) 4)
 				(gGame masterVolume: (- curVolume 4))
 			)
+		)
+		; If we're in speech-only mode, change the cursor to a wait cursor
+		; instead.
+		(if (== gMsgType $0002)
 			(if (not modeless)
 				(= saveCursor (gGame setCursor: gWaitCursor 1))
 			)
@@ -131,14 +135,25 @@
 		(return 1)
 	)
 
-	(method (startText theBuf &tmp strLength)
-		(if (not (& gMsgType $0002))
-			(= ticks (Max 240 (* gTextSpeed 2 (= strLength (StrLen theBuf)))))
+	(method (startText theBuf &tmp strLength textPtr [textBuf 500])
+		(if (& gMsgType $0002)
+			(Message msgGET
+				(WordAt theBuf 0)
+				(WordAt theBuf 1)
+				(WordAt theBuf 2)
+				(WordAt theBuf 3)
+				(WordAt theBuf 4)
+				@textBuf)
+			(= textPtr @textBuf)
+		else
+			(= textPtr theBuf)
 		)
+		(= strLength (StrLen textPtr))
+		(= ticks (Max 240 (* gTextSpeed 2 strLength)))
 		(if gModelessDialog
 			(gModelessDialog dispose:)
 		)
-		(self display: theBuf)
+		(self display: textPtr)
 		(return strLength)
 	)
 
@@ -175,7 +190,10 @@
 		(= v (WordAt theKeys 2))
 		(= c (WordAt theKeys 3))
 		(= s (WordAt theKeys 4))
-		(= ticks (DoAudio audPLAY m n v c s))
+		(if (ResCheck rsAUDIO36 m n v c s)
+			(= ticks (DoAudio audPLAY m n v c s))
+		)
+		(return ticks)
 	)
 
 	(method (doit)
@@ -183,12 +201,12 @@
 			(and
 				(!= ticks -1)
 				(> (- gGameTime ticks) 0)
-				(if global83
+				(if (& gMsgType $0002)
 					(== (DoAudio audPOSITION) -1)
 				else
 					1
 				)
-				(or (not keepWindow) global83)
+				(or (not keepWindow) (& gMsgType $0002))
 			)
 			(self dispose: disposeWhenDone)
 			(return 0)
@@ -248,7 +266,7 @@
 					)
 				)
 			)
-			(if global83
+			(if (& gMsgType $0002)
 				(DoAudio audSTOP)
 			)
 			(= modNum -1)
@@ -257,7 +275,7 @@
 		(if gModelessDialog
 			(gModelessDialog dispose:)
 		)
-		(if global83
+		(if (& gMsgType $0002)
 			(gGame masterVolume: curVolume)
 		)
 		(if (and saveCursor (not (HaveMouse)))
@@ -487,16 +505,24 @@
 		)
 	)
 
-	(method (startAudio theKeys &tmp m n v c s)
-		(self show:)
-		(super startAudio: theKeys)
+	(method (startAudio theKeys &tmp m n v c s ticks)
+		; Only show the text box here if we are in voice-only mode. Otherwise
+		; startText has already done it, causing some layering issues.
+		(if (== gMsgType $0002)
+			(self show:)
+		)
+		(= ticks (super startAudio: theKeys))
 		(if mouth
 			(= m (WordAt theKeys 0))
 			(= n (WordAt theKeys 1))
 			(= v (WordAt theKeys 2))
 			(= c (WordAt theKeys 3))
 			(= s (WordAt theKeys 4))
-			(mouth setCycle: MouthSync m n v c s)
+			(if (ResCheck rsSYNC36 m n v c s)
+				(mouth setCycle: MouthSync m n v c s)
+			else
+				(mouth setCycle: RandCycle ticks 0)
+			)
 		)
 		(if (and eyes (not (eyes cycler:)))
 			(eyes setCycle: Blink blinkSpeed)

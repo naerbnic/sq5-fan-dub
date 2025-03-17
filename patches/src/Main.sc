@@ -547,7 +547,7 @@
 		(super init:)
 		(= gEgo ego)
 		(User alterEgo: gEgo canControl: 0 canInput: 0)
-		(= gMsgType 1)
+		(= gMsgType 3)
 		(= gUseSortedFeatures 1)
 		(= global103 (DoSound sndGET_POLYPHONY))
 		(= gPossibleScore 5000)

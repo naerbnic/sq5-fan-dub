@@ -102,7 +102,7 @@
 		curCase 0
 	)
 
-	(method (display param1 &tmp temp0 temp1 temp2 temp3 temp4 temp5 temp6)
+	(method (display param1 &tmp temp0 temp1 temp2 temp3 temp4 temp5 temp6 [textBuf 500])
 		(if normal
 			(super display: param1 &rest)
 		else
@@ -276,15 +276,28 @@
 		)
 	)
 
-	(method (startText param1 &tmp temp0)
+	(method (startText param1 &tmp temp0 textPtr [textBuf 500])
 		(if normal
 			(super startText: param1 &rest)
 		else
+			(if (& gMsgType $0002)
+				(Message msgGET
+					(WordAt param1 0)
+					(WordAt param1 1)
+					(WordAt param1 2)
+					(WordAt param1 3)
+					(WordAt param1 4)
+					@textBuf)
+				(= textPtr @textBuf)
+			else
+				(= textPtr param1)
+			)
+			(= temp0 (StrLen textPtr))
 			(if (not viewInPrint)
 				(self show:)
 			)
 			(if (not (& gMsgType $0002))
-				(= ticks (Max 240 (* 8 (= temp0 (StrLen param1)))))
+				(= ticks (Max 240 (* 8 temp0)))
 			)
 			(if mouth
 				(mouth setCycle: RandCycle (* 4 temp0) 0 1)
@@ -295,7 +308,7 @@
 			(if gModelessDialog
 				(gModelessDialog dispose:)
 			)
-			(self display: param1)
+			(self display: textPtr)
 			(return temp0)
 		)
 	)
@@ -319,11 +332,12 @@
 			else
 				((= gFastCast (EventHandler new:)) name: {fastCast} add: self)
 			)
-			(if (& gMsgType $0002)
-				(self startAudio:)
-			)
+			; Put this in this order so the audio can override the number of ticks.
 			(if (& gMsgType $0001)
 				(self startText: param1)
+			)
+			(if (& gMsgType $0002)
+				(self startAudio: param1)
 			)
 			(+= ticks (+ 60 gGameTime))
 			(return 1)
